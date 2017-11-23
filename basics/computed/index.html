@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue App - Computed</title>
+        <script src="http://unpkg.com/vue"></script>
+        <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+    </head>
+    <body>
+        <div id="app">
+            <span>Change text:</span>
+            <input v-model="text" placeholder="hello...">
+            <div>Lowercased: {{lowerText}}</div>
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    text: ''
+                },
+                computed: {
+                    lowerText(){
+                        return this.text.toLowerCase()
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

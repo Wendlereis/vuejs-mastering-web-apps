@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue App - Hooks</title>
+        <script src="http://unpkg.com/vue"></script>
+        <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+    </head>
+    <body>
+        <div id="app">
+            <div>{{count}}</div>
+            <button @click="increment">increment</button>
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    count: 0
+                },
+                methods: {
+                    increment(){
+                        this.count++
+                    }
+                },
+                updated(){
+                    console.log('count', this.count)
+                }
+            })
+        </script>
+    </body>
+</html>
