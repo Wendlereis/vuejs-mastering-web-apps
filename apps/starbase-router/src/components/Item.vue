@@ -26,7 +26,7 @@
         },
         methods: {
             switchItem(){
-                let randomId = Math.floor(Math.random() * 63) + 1
+                let randomId = Math.floor(Math.random() * 20) + 1
 
                 fetch(`https://swapi.co/api/${this.type}/${randomId}`, {
                         method: 'GET'

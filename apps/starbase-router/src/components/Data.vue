@@ -25,7 +25,7 @@
                 this.items = []
                 this.type = this.$route.params.type
 
-                let initalIds = [1, 13, 14]
+                let initalIds = [2, 3, 5]
 
                 for(let i in initalIds){
                     let id = initalIds[i]
