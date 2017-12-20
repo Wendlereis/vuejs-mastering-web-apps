@@ -1,6 +1,6 @@
 <template>
   <div class="from-inline">
-    <h3>Sign In</h3>
+    <h3>Sign Up</h3>
 
     <div class="form-group">
         <input
@@ -17,13 +17,13 @@
 
         <button
             class="btn btn-primary"
-            @click="signIn">
-            Sign In
+            @click="signUp">
+            Sign Up
         </button>
     </div>
 
     <p>
-        <router-link to="/signup">Not a user? Sign up</router-link>
+        <router-link to="/signin">Already a user? Sign in</router-link>
     </p>
 
     <p>{{error.message}}</p>
@@ -34,7 +34,7 @@
     import { firebaseApp } from '../firebaseApp'
 
     export default {
-        data() {
+        data(){
             return {
                 email: '',
                 password: '',
@@ -44,8 +44,8 @@
             }
         },
         methods: {
-            signIn(){
-                firebaseApp.auth().signInWithEmailAndPassword(this.email, this.password)
+            signUp(){
+                firebaseApp.auth().createUserWithEmailAndPassword(this.email, this.password)
                 .catch(err => {
                     this.error = err
                 })

@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import App from './components/App'
 import Dashboard from './components/Dashboard'
 import Signin from './components/Signin'
+import Signup from './components/Signup'
 
 import { firebaseApp } from './firebaseApp'
 
@@ -15,7 +16,8 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         { path: '/dashboard', component: Dashboard },
-        { path: '/signin', component: Signin }
+        { path: '/signin', component: Signin },
+        { path: '/signup', component: Signup }
     ]
 })
 

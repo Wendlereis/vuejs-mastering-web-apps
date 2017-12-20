@@ -8,7 +8,8 @@ import * as actions from './actions'
 
 
 const state = {
-    user: {}
+    user: {},
+    events: []
 }
 
 export default new Vuex.Store({
